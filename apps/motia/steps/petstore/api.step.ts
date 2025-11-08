@@ -38,7 +38,7 @@ export const handler: Handlers["ApiTrigger"] = async (
 	const newPetRecord = await petStoreService.createPet(pet);
 
     // TS Type error here!
-    const testStream = streams.streamTest.get();
+    const testStream = streams.streamTest.get(traceId, traceId);
 
 	if (foodOrder) {
 		await emit({
